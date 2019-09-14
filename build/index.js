@@ -15,7 +15,7 @@ class Server {
         this.setRouter();
     }
     setParams() {
-        this.port = process.env.port;
+        this.port = process.env.port || 3000;
         this.app.set('port', this.port);
         this.app.use(cors_1.default());
         this.app.use(express_1.default.json());
