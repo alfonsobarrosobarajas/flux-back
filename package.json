@@ -1,9 +1,6 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "engines": {
-    "node": "10.3.0"
-  },
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -23,5 +20,8 @@
   },
   "devDependencies": {
     "nodemon": "^1.19.2"
+  },
+  "engines": {
+    "node": "10.16.0"
   }
 }
