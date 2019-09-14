@@ -10,12 +10,12 @@ const cors_1 = __importDefault(require("cors"));
 //
 class Server {
     constructor() {
-        this.port = process.env.port;
         this.app = express_1.default();
         this.setParams();
         this.setRouter();
     }
     setParams() {
+        this.port = process.env.port;
         this.app.set('port', this.port);
         this.app.use(cors_1.default());
         this.app.use(express_1.default.json());

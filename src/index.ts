@@ -6,7 +6,7 @@ import cors from 'cors';
 class Server {
 
     app: Application;
-    port: any = process.env.port;
+    port: any;
 
 
     constructor() {
@@ -20,7 +20,7 @@ class Server {
 
     setParams(): void {
 
-        
+        this.port = process.env.port;
         this.app.set('port', this.port);
         this.app.use(cors());
         this.app.use(express.json());
