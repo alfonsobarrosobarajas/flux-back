@@ -20,7 +20,7 @@ class Server {
 
     setParams(): void {
 
-        this.port = process.env.port || 3000;
+        this.port = process.env.port;
         this.app.set('port', this.port);
         this.app.use(cors());
         this.app.use(express.json());
