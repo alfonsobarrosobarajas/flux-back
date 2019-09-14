@@ -6,7 +6,7 @@ import cors from 'cors';
 class Server {
 
     app: Application;
-    port: any = process.env.port || 3000;
+    port: any = process.env.port;
 
 
     constructor() {
