@@ -15,7 +15,7 @@ class ConceptRouter {
     setRouter(): void {
 
         this.router.get('/', conceptController.list);
-        this.router.get('/:id', conceptController.get);
+        //this.router.get('/:id', conceptController.get);
         this.router.post('/',conceptController.create);
         this.router.put('/:id', conceptController.update);
         this.router.delete('/:id', conceptController.delete);
