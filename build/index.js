@@ -25,7 +25,7 @@ class Server {
         this.app.use('/api/concept', ConceptRouter_1.default);
     }
     start() {
-        this.app.listen(this.port, () => {
+        this.app.listen(this.port, '0.0.0.0', () => {
             console.log('Running on port: ', this.port);
         });
     }
