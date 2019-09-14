@@ -7,6 +7,7 @@ const express_1 = __importDefault(require("express"));
 const HomeRouter_1 = __importDefault(require("./routers/HomeRouter"));
 const ConceptRouter_1 = __importDefault(require("./routers/ConceptRouter"));
 const cors_1 = __importDefault(require("cors"));
+//
 class Server {
     constructor() {
         this.app = express_1.default();

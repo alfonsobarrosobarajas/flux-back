@@ -2,7 +2,7 @@ import express, { Application } from 'express';
 import homeRouter from './routers/HomeRouter';
 import conceptRouter from './routers/ConceptRouter';
 import cors from 'cors';
-
+//
 class Server {
 
     app: Application;
