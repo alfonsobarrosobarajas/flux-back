@@ -30,30 +30,23 @@ class ConceptController {
             });
         });
     }
-    /*
-        public async get(req: Request, resp: Response): Promise<any> {
-    
+    get(req, resp) {
+        return __awaiter(this, void 0, void 0, function* () {
             const { id } = req.params;
-            const concept = await cnn.then(
-    
-                connection => {
-                    return connection.query('select * from concept where id = ?', [id]);
+            const concept = yield Connection_1.default.then(connection => {
+                return connection.query('select * from concept where id = ?', [id]);
+            }).then(concept => {
+                if (concept.length > 0) {
+                    resp.json(concept);
                 }
-    
-            ).then(
-                concept => {
-                    if (concept.length > 0) {
-                        resp.json(concept);
-                    } else {
-                        resp.status(404).json({ text: Messages.NO_DATA_LIST });
-                    }
+                else {
+                    resp.status(404).json({ text: Messages_1.default.NO_DATA_LIST });
                 }
-            ).catch(() => {
-                resp.json({ text: Messages.CNN_FAIL });
+            }).catch(() => {
+                resp.json({ text: Messages_1.default.CNN_FAIL });
             });
-    
-        }
-    */
+        });
+    }
     create(req, resp) {
         return __awaiter(this, void 0, void 0, function* () {
             yield Connection_1.default.then(connection => {

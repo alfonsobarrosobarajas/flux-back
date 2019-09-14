@@ -24,7 +24,7 @@ class ConceptController {
         });
 
     }
-/*
+
     public async get(req: Request, resp: Response): Promise<any> {
 
         const { id } = req.params;
@@ -47,7 +47,7 @@ class ConceptController {
         });
 
     }
-*/
+
     public async create(req: Request, resp: Response): Promise<any> {
 
         await cnn.then(
